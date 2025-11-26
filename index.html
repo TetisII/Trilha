@@ -219,54 +219,94 @@
 
                     <img src="src/images/ave3.png" class="dish-image" alt="">
 
-                    <h3 class="dish-title">
-                        Lorem Ipsum
+                     <h3 class="dish-title"
+                        style="font-size: 1.4rem; font-weight: bold; text-align:center; margin-bottom: -15px;">
+                        Canário-da-terra
                     </h3>
-
-                    <span class="dish-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <span style="font-size: 0.85rem; color: #888; font-style: italic; display: block; text-align:center; margin-bottom: -6px;">
+                        Sicalis flaveola
                     </span>
 
+                    <div style="text-align:center; cursor:pointer; color:#0077cc; margin-bottom: -15px;"
+                         onclick="
+                            const desc = this.nextElementSibling;
+                            if (desc.style.display === 'block') {
+                                desc.style.display = 'none';
+                                this.style.color = '#0077cc'; // azul quando fechado
+                            } else {
+                                desc.style.display = 'block';
+                                this.style.color = '#888'; // cinza quando aberto
+                            }
+                         ">
+                        Descrição
+                    </div>
+
+                    <div style="display:none; font-size:0.95rem; color:#444; text-align:center; margin-bottom: -10px;">
+                        Os machos são amarelos com a testa laranja, alguns possuem tons marrom nas costas e asas.
+                        Já as fêmeas são mais opacas que os machos, apresentando tons mais claros.
+                    </div>
+
+                    <audio id="somAve3">
+                        <source src="src/audios/canas.mp3" type="audio/mpeg">
+                    </audio>
+
                     <div class="dish-price">
-                        <h4>R$20,00</h4>
-                        <button class="btn-default">
-                            <i class="fa-solid fa-play"></i>
+                        <button class="btn-default" 
+                                onclick="toggleSom('somAve3', this)"
+                                style="margin-top:10px;"> 
+                            <i class="fa-solid fa-circle-play"></i>
+                            <span style="font-weight:600; margin-left:4px;">Ouvir</span>
                         </button>
                     </div>
                 </div>
 
                 <div class="dish">
                     <div class="dish-heart"
-                         onclick="window.open('https://www.wikiaves.com.br/wiki/anu-branco', '_blank')"
+                         onclick="window.open('https://www.wikiaves.com.br/wiki/sabia-laranjeira', '_blank')"
                          style="cursor:pointer;">
                         <i class="fa-solid fa-info"></i>
                     </div>
 
                     <img src="src/images/ave4.png" class="dish-image" alt="">
 
-                    <h3 class="dish-title">
-                        Lorem Ipsum
+                    <h3 class="dish-title"
+                        style="font-size: 1.4rem; font-weight: bold; text-align:center; margin-bottom: -15px;">
+                        Sabiá-laranjeira
                     </h3>
-
-                    <span class="dish-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <span style="font-size: 0.85rem; color: #888; font-style: italic; display: block; text-align:center; margin-bottom: -6px;">
+                        Turdus rufiventris
                     </span>
 
-                    <div class="dish-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                    <div style="text-align:center; cursor:pointer; color:#0077cc; margin-bottom: -15px;"
+                         onclick="
+                            const desc = this.nextElementSibling;
+                            if (desc.style.display === 'block') {
+                                desc.style.display = 'none';
+                                this.style.color = '#0077cc'; // azul quando fechado
+                            } else {
+                                desc.style.display = 'block';
+                                this.style.color = '#888'; // cinza quando aberto
+                            }
+                         ">
+                        Descrição
                     </div>
 
+                    <div style="display:none; font-size:0.95rem; color:#444; text-align:center; margin-bottom: -10px;">
+                        Seu corpo é quase totalmente amarronzado, enquanto a barriga é laranja com a garganta pálida e listrada.
+                    </div>
+
+                    <audio id="somAve4">
+                        <source src="src/audios/sabia.mp3" type="audio/mpeg">
+                    </audio>
+
                     <div class="dish-price">
-                        <h4>R$130,00</h4>
-                        <button class="btn-default">
-                            <i class="fa-solid fa-play"></i>
+                        <button class="btn-default" 
+                                onclick="toggleSom('somAve4', this)"
+                                style="margin-top:10px;"> 
+                            <i class="fa-solid fa-circle-play"></i>
+                            <span style="font-weight:600; margin-left:4px;">Ouvir</span>
                         </button>
                     </div>
-                </div>
             </div>
         </section>
 
@@ -384,6 +424,7 @@ function toggleSom(audioId, button) {
 </script>
 </body>
 </html>
+
 
 
 
