@@ -158,30 +158,61 @@
                 </div>
 
                 <div class="dish">
-                    <div class="dish-heart">
+                    <div class="dish-heart"
+                         onclick="window.open('https://www.wikiaves.com.br/wiki/pica-pau-verde-barrado', '_blank')"
+                         style="cursor:pointer;">
                         <i class="fa-solid fa-info"></i>
                     </div>
 
                     <img src="src/images/ave2.png" class="dish-image" alt="">
 
-                    <h3 class="dish-title">
-                        Lorem Ipsum
+                    <h3 class="dish-title"
+                        style="font-size: 1.4rem; font-weight: bold; text-align:center; margin-bottom: -15px;">
+                        Pica-pau-verde-barrado
                     </h3>
-
-                    <span class="dish-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <span style="font-size: 0.85rem; color: #888; font-style: italic; display: block; text-align:center; margin-bottom: -6px;">
+                        Colaptes melanochloros
                     </span>
 
+                    <div style="text-align:center; cursor:pointer; color:#0077cc; margin-bottom: -15px;"
+                         onclick="
+                            const desc = this.nextElementSibling;
+                            if (desc.style.display === 'block') {
+                                desc.style.display = 'none';
+                                this.style.color = '#0077cc'; // azul quando fechado
+                            } else {
+                                desc.style.display = 'block';
+                                this.style.color = '#888'; // cinza quando aberto
+                            }
+                         ">
+                        Descrição
+                    </div>
+
+                    <div style="display:none; font-size:0.95rem; color:#444; text-align:center; margin-bottom: -10px;">
+                        Aqui vai a descrição completa da ave.  
+                        Pode ser um texto longo, explicando comportamento, habitat e curiosidades.
+                    </div>
+
+                    <audio id="somAve2">
+                        <source src="src/audios/picas.mp3" type="audio/mpeg">
+                    </audio>
+
                     <div class="dish-price">
-                        <h4>R$20,00</h4>
-                        <button class="btn-default">
-                            <i class="fa-solid fa-play"></i>
+                        <button class="btn-default" 
+                                onclick="toggleSom('somAve2', this)"
+                                style="margin-top:10px;"> 
+                            <i class="fa-solid fa-circle-play"></i>
+                            <span style="font-weight:600; margin-left:4px;">Ouvir</span>
                         </button>
                     </div>
                 </div>
 
                 <div class="dish">
-                    <div class="dish-heart">
+                    <div class="dish-heart"
+                         onclick="window.open('https://www.wikiaves.com.br/wiki/canario-da-terra', '_blank')"
+                         style="cursor:pointer;">
+                        <i class="fa-solid fa-info-circle"></i>
+                    </div>>
                         <i class="fa-solid fa-info"></i>
                     </div>
 
@@ -204,7 +235,9 @@
                 </div>
 
                 <div class="dish">
-                    <div class="dish-heart">
+                    <div class="dish-heart"
+                         onclick="window.open('https://www.wikiaves.com.br/wiki/anu-branco', '_blank')"
+                         style="cursor:pointer;">
                         <i class="fa-solid fa-info"></i>
                     </div>
 
@@ -350,4 +383,5 @@ function toggleSom(audioId, button) {
 </script>
 </body>
 </html>
+
 
