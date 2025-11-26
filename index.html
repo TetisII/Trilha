@@ -65,8 +65,8 @@
                 </h1>
 
                 <p class="description">
-                    Coonvidados você a sentar por alguns minutos e simplesmente ouvir o ambiente ao seu redor.
-                    Tente observar, tente escutar, tente sentir os pequenos cantores que vivem neste lugar.
+                    Convidamos você a relaxar por alguns minutos e simplesmente ouvir o ambiente ao seu redor.
+                    Tente observar, tente escutar, tente sentir e apreciar os pequenos cantores que vivem neste lugar.
                 </p>
 
                 <div id="cta_buttons">
@@ -457,6 +457,56 @@
                         </button>
                     </div>
                 </div>
+
+                <div class="dish">
+                    <div class="dish-heart"
+                         onclick="window.open('https://www.wikiaves.com.br/wiki/lavadeira-mascarada', '_blank')"
+                         style="cursor:pointer;">
+                        <i class="fa-solid fa-info-circle"></i>
+                    </div>
+
+                    <img src="src/images/ave8.png" class="dish-image" alt="">
+
+                    <h3 class="dish-title"
+                        style="font-size: 1.4rem; font-weight: bold; text-align:center; margin-bottom: -15px;">
+                        Lavadeira-mascarada
+                    </h3>
+                    <span style="font-size: 0.85rem; color: #888; font-style: italic; display: block; text-align:center; margin-bottom: -6px;">
+                        Fluvicola nengeta
+                    </span>
+
+                    <div style="text-align:center; cursor:pointer; color:#0077cc; margin-bottom: -15px;"
+                         onclick="
+                            const desc = this.nextElementSibling;
+                            if (desc.style.display === 'block') {
+                                desc.style.display = 'none';
+                                this.style.color = '#0077cc'; // azul quando fechado
+                            } else {
+                                desc.style.display = 'block';
+                                this.style.color = '#888'; // cinza quando aberto
+                            }
+                         ">
+                        Descrição
+                    </div>
+
+                    <div style="display:none; font-size:0.95rem; color:#444; text-align:center; margin-bottom: -10px;">
+                        Papa-moscas de tamanho médio, geralmente encontrado próximo d'água em áreas urbanas.
+                        Possui uma faixa preta nos olhos, como uma mascara, que contrasta sua cor esbranquiçada.
+                    </div>
+
+                    <audio id="somAve8">
+                        <source src="src/audios/lava.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <div class="dish-price">
+                        <button class="btn-default" 
+                                onclick="toggleSom('somAve8', this)"
+                                style="margin-top:10px;"> 
+                            <i class="fa-solid fa-circle-play"></i>
+                            <span style="font-weight:600; margin-left:4px;">Ouvir</span>
+                        </button>
+                    </div>
+                </div>
         </section>
 
         <section id="testimonials">
@@ -573,6 +623,7 @@ function toggleSom(audioId, button) {
 </script>
 </body>
 </html>
+
 
 
 
